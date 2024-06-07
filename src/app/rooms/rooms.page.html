@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Habitaciones</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header-image">
+    <img src="assets/images/habitaciones/habitaciones_header.jpg" alt="Imagen de Habitaciones">
+    <div class="header-overlay">
+      <h1>Estándar</h1>
+    </div>
+  </div>
+
+  <div class="rooms-section">
+    <mat-card class="room-card">
+      <img mat-card-image src="assets/images/habitaciones/room1.jpg" alt="Habitación Doble">
+      <mat-card-header>
+        <mat-card-title>Habitación Doble</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Habitación estándar con una cama doble o dos camas individuales, adecuada para una o dos personas.</p>
+        <p class="price">$35,000</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <ion-button expand="full" color="primary">Reservar habitación</ion-button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="room-card">
+      <img mat-card-image src="assets/images/habitaciones/room2.jpg" alt="Habitación Individual">
+      <mat-card-header>
+        <mat-card-title>Habitación Individual</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Ideal para viajeros solitarios que buscan una estancia cómoda y económica con todas las comodidades básicas.</p>
+        <p class="price">$30,000</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <ion-button expand="full" color="primary">Reservar habitación</ion-button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ion-content>

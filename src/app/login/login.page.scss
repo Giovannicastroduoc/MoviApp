@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-title {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: -8px;
+    margin-bottom: 8px;
+  }
+  
+  ion-item {
+    width: 100%;
+  }
+  

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title (click)="reloadPage()" style="cursor: pointer;">Hotel Easy</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title class="login-title">Iniciar Sesión</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
+            <p *ngIf="loginForm.get('email')?.errors?.['required']">El correo electrónico es requerido.</p>
+            <p *ngIf="loginForm.get('email')?.errors?.['email']">Correo electrónico no válido.</p>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
+            <p *ngIf="loginForm.get('password')?.errors?.['required']">La contraseña es requerida.</p>
+            <p *ngIf="loginForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</p>
+          </div>
+
+          <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</ion-button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ion-content>
